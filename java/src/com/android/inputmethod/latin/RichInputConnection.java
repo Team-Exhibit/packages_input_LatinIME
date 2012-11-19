@@ -28,7 +28,6 @@ import android.view.inputmethod.InputConnection;
 
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.latin.define.ProductionFlag;
-import com.android.inputmethod.research.ResearchLogger;
 
 import java.util.Locale;
 import java.util.regex.Pattern;
@@ -150,7 +149,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.finishComposingText();
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_finishComposingText();
+               // ResearchLogger.richInputConnection_finishComposingText();
             }
         }
     }
@@ -172,7 +171,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.finishComposingText();
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_finishComposingText();
+           //     ResearchLogger.richInputConnection_finishComposingText();
             }
         }
     }
@@ -186,7 +185,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.commitText(text, i);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_commitText(text, i);
+            //    ResearchLogger.richInputConnection_commitText(text, i);
             }
         }
     }
@@ -274,7 +273,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.deleteSurroundingText(i, j);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_deleteSurroundingText(i, j);
+           //     ResearchLogger.richInputConnection_deleteSurroundingText(i, j);
             }
         }
         if (DEBUG_PREVIOUS_TEXT) checkConsistencyForDebug();
@@ -285,7 +284,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.performEditorAction(actionId);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_performEditorAction(actionId);
+           //     ResearchLogger.richInputConnection_performEditorAction(actionId);
             }
         }
     }
@@ -333,7 +332,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.sendKeyEvent(keyEvent);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_sendKeyEvent(keyEvent);
+           //     ResearchLogger.richInputConnection_sendKeyEvent(keyEvent);
             }
         }
     }
@@ -348,7 +347,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.setComposingText(text, i);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_setComposingText(text, i);
+           //     ResearchLogger.richInputConnection_setComposingText(text, i);
             }
         }
         if (DEBUG_PREVIOUS_TEXT) checkConsistencyForDebug();
@@ -360,7 +359,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.setSelection(from, to);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_setSelection(from, to);
+           //     ResearchLogger.richInputConnection_setSelection(from, to);
             }
         }
         mCurrentCursorPosition = from;
@@ -376,7 +375,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.commitCorrection(correctionInfo);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_commitCorrection(correctionInfo);
+           //     ResearchLogger.richInputConnection_commitCorrection(correctionInfo);
             }
         }
         if (DEBUG_PREVIOUS_TEXT) checkConsistencyForDebug();
@@ -392,7 +391,7 @@ public final class RichInputConnection {
         if (null != mIC) {
             mIC.commitCompletion(completionInfo);
             if (ProductionFlag.IS_EXPERIMENTAL) {
-                ResearchLogger.richInputConnection_commitCompletion(completionInfo);
+          //      ResearchLogger.richInputConnection_commitCompletion(completionInfo);
             }
         }
         if (DEBUG_PREVIOUS_TEXT) checkConsistencyForDebug();
